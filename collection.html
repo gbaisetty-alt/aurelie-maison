@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Collection — AURÉLIE</title>
+  <meta name="description" content="Resort 2027 — La Lumière. Eight hand-finished pieces from Maison Aurélie: silk dresses, sculpted wool, calfskin leather goods and fine accessories.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/products.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__word">AURÉLIE</span>
+      <span class="loader__sub">Maison de couture · Paris</span>
+      <span class="loader__bar"><i></i></span>
+    </div>
+  </div>
+
+  <div class="announce">
+    <div class="announce__inner">
+      <a class="announce__side" href="index.html#services">Complimentary shipping &amp; returns</a>
+      <p class="announce__center">La Lumière — Resort 2027</p>
+      <a class="announce__side" href="index.html#newsletter">Book a private appointment</a>
+    </div>
+  </div>
+
+  <header class="header header--solid" id="header">
+    <div class="header__inner">
+      <button class="menu-toggle" type="button" data-menu-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
+        <span>Menu</span>
+      </button>
+      <nav class="header__nav" aria-label="Primary">
+        <a href="collection.html" aria-current="page">Collection</a>
+        <a href="index.html#lookbook">Lookbook</a>
+        <a href="index.html#maison">Maison</a>
+      </nav>
+      <a class="brand" href="index.html" aria-label="Aurélie — home">AURÉLIE</a>
+      <div class="header__actions">
+        <button class="header__btn header__search-btn" type="button" data-search-open aria-label="Search the collection">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="M15.5 15.5 21 21"/></svg>
+          <span>Search</span>
+        </button>
+        <button class="header__btn" type="button" data-cart-open aria-label="Open shopping bag">
+          <span>Bag</span>
+          <span class="bag-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Maison</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Collection</span>
+        </nav>
+        <div class="page-head__row">
+          <h1 class="reveal">The <em>Collection</em></h1>
+          <div class="page-head__intro reveal" style="--i:1">
+            <p>Resort 2027 — La Lumière. Eight pieces, cut and finished by hand in our Paris atelier. Made in considered numbers, to be worn for years.</p>
+            <p class="page-head__meta">Eight pieces — Available now</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="collection-bar">
+      <div class="container collection-bar__inner">
+        <div class="filters" role="group" aria-label="Filter by category">
+          <button class="filter is-active" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="Ready-to-Wear" aria-pressed="false">Ready-to-Wear</button>
+          <button class="filter" type="button" data-filter="Outerwear" aria-pressed="false">Outerwear</button>
+          <button class="filter" type="button" data-filter="Leather Goods" aria-pressed="false">Leather Goods</button>
+          <button class="filter" type="button" data-filter="Accessories" aria-pressed="false">Accessories</button>
+        </div>
+        <div class="collection-bar__right">
+          <p class="results-count" data-results-count aria-live="polite">8 pieces</p>
+          <label class="sort">
+            <span class="sr-only">Sort products</span>
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price — low to high</option>
+              <option value="price-desc">Price — high to low</option>
+            </select>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <section class="collection section section--tight" aria-label="Products">
+      <div class="container">
+        <div class="product-grid product-grid--collection" id="collection-grid"></div>
+        <noscript><p class="noscript-note">Enable JavaScript to browse and shop the collection.</p></noscript>
+      </div>
+    </section>
+
+    <section class="collection-cta" aria-labelledby="collection-cta-title">
+      <img src="assets/images/campaign.jpg" alt="A model in a black gown on a Paris rooftop at dusk" width="1792" height="1024" loading="lazy">
+      <div class="collection-cta__shade" aria-hidden="true"></div>
+      <div class="container collection-cta__content">
+        <p class="label label--light reveal">The Campaign</p>
+        <h2 id="collection-cta-title" class="reveal" style="--i:1">La <em>Lumière</em></h2>
+        <p class="reveal" style="--i:2">A study of light, silk and the discipline of restraint.</p>
+        <div class="reveal" style="--i:3">
+          <a class="btn btn--light" href="index.html#lookbook">
+            <span>View the lookbook</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <p class="footer__word">AURÉLIE</p>
+        <p class="footer__tag">Maison de couture<br>Paris, since 1947</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Client care</h4>
+          <a href="mailto:clientele@aurelie.example">Contact</a>
+          <a href="index.html#newsletter">Private appointments</a>
+          <a href="index.html#services">Shipping &amp; returns</a>
+          <a href="index.html#services">Care guide</a>
+        </div>
+        <div class="footer__col">
+          <h4>The Maison</h4>
+          <a href="index.html#maison">Our story</a>
+          <a href="index.html#atelier">The atelier</a>
+          <a href="index.html#lookbook">Lookbook</a>
+          <a href="collection.html" aria-current="page">Collection</a>
+        </div>
+        <div class="footer__col">
+          <h4>Follow</h4>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Maison Aurélie</p>
+      <div class="footer__legal">
+        <a href="index.html#newsletter">Privacy</a>
+        <a href="index.html#newsletter">Terms</a>
+        <a href="index.html#newsletter">Cookies</a>
+      </div>
+      <p>France — EUR €</p>
+    </div>
+  </footer>
+
+  <div class="menu" id="mobile-menu" aria-hidden="true" inert>
+    <div class="menu__inner">
+      <div class="menu__top">
+        <a class="brand brand--light" href="index.html">AURÉLIE</a>
+        <button class="icon-btn icon-btn--light" type="button" data-menu-close aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+        </button>
+      </div>
+      <nav class="menu__nav" aria-label="Mobile navigation">
+        <a href="collection.html" aria-current="page"><span>01</span>Collection</a>
+        <a href="index.html#lookbook"><span>02</span>Lookbook</a>
+        <a href="index.html#atelier"><span>03</span>Atelier</a>
+        <a href="index.html#maison"><span>04</span>Maison</a>
+      </nav>
+      <div class="menu__foot">
+        <div>
+          <p class="label label--light">Clientele</p>
+          <a href="mailto:clientele@aurelie.example">clientele@aurelie.example</a>
+        </div>
+        <p>Paris — France<br>EUR €</p>
+      </div>
+      <p class="menu__campaign">La Lumière — Resort 2027</p>
+    </div>
+  </div>
+
+  <div class="search" id="search" aria-hidden="true" inert>
+    <div class="search__inner">
+      <div class="search__head">
+        <p class="label">Search the Maison</p>
+        <button class="icon-btn" type="button" data-search-close aria-label="Close search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+        </button>
+      </div>
+      <div class="search__field">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="M15.5 15.5 21 21"/></svg>
+        <input type="search" id="search-input" placeholder="Try “silk”, “coat” or “leather”" autocomplete="off" aria-label="Search products">
+      </div>
+      <div class="search__results" id="search-results" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="drawer" id="cart-drawer" aria-hidden="true" inert>
+    <div class="drawer__backdrop" data-cart-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <header class="drawer__head">
+        <p id="cart-title">Shopping bag <span class="bag-count bag-count--dark" data-cart-count>0</span></p>
+        <button class="icon-btn" type="button" data-cart-close aria-label="Close shopping bag">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+        </button>
+      </header>
+      <div class="drawer__body" id="cart-items"></div>
+      <div class="drawer__foot" id="cart-foot">
+        <div class="drawer__row"><span>Subtotal</span><span data-cart-subtotal>$0</span></div>
+        <p class="drawer__note">Complimentary shipping, duties included. Returns accepted within 30 days.</p>
+        <button class="btn btn--dark btn--full" type="button" data-checkout>Proceed to checkout</button>
+        <p class="drawer__secure">Secure payment — Visa · Mastercard · Amex</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="modal" id="product-modal" aria-hidden="true" inert>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button class="icon-btn modal__close" type="button" data-modal-close aria-label="Close product details">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg>
+      </button>
+      <div class="modal__media">
+        <img id="modal-image" src="assets/images/hero.jpg" alt="" width="1024" height="1280">
+      </div>
+      <div class="modal__body">
+        <p class="label" id="modal-category"></p>
+        <h2 id="modal-name"></h2>
+        <p class="modal__sub" id="modal-subtitle"></p>
+        <p class="modal__price" id="modal-price"></p>
+        <p class="modal__desc" id="modal-desc"></p>
+        <div class="modal__option">
+          <div class="modal__option-head">
+            <span>Size</span>
+            <span class="modal__size-note">True to size</span>
+          </div>
+          <div class="sizes" id="modal-sizes"></div>
+        </div>
+        <button class="btn btn--dark btn--full" type="button" id="modal-add">Add to bag</button>
+        <ul class="modal__meta">
+          <li>Complimentary shipping &amp; returns</li>
+          <li>Hand-finished in Paris</li>
+          <li>Duties included</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+</body>
+</html>
